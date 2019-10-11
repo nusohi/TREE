@@ -1,0 +1,36 @@
+﻿<UserControl x:Class="TREE.TreeViewM"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:TREE"
+             mc:Ignorable="d" Height="386.333" Width="460" MinWidth="460" MaxWidth="460" MaxHeight="1000" MinHeight="360">
+    <Grid HorizontalAlignment="Left" Margin="0" Width="460" ScrollViewer.HorizontalScrollBarVisibility="Auto">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="460"/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="52"/>
+            <RowDefinition Height="277"/>
+        </Grid.RowDefinitions>
+
+
+        <TextBox x:Name="NodeNameText" Text="右键创建节点" FontSize="24" Margin="295,4,10,0" Height="40" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Row="1" PreviewKeyUp="NodeNameText_PreviewKeyUp"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="树名" VerticalAlignment="Top" Height="26" Width="45" FontSize="20" TextAlignment="Center" Margin="10,14,0,0" Grid.Row="1"/>
+        <TreeView x:Name="tree" VerticalContentAlignment="Stretch" Background="AntiqueWhite"
+                SelectedItemChanged="InnerTreeSelectedItemChanged" PreviewMouseRightButtonDown="Tree_PreviewMouseRightButtonDown" Margin="0,2,10,1" Grid.Row="2" Padding="1,1,1,0" PreviewMouseDoubleClick="Tree_PreviewMouseDoubleClick"/>
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="节点名" VerticalAlignment="Top" Height="26" Width="70" FontSize="20" TextAlignment="Center" Margin="225,14,0,0" Grid.Row="1"/>
+
+        <TextBlock HorizontalAlignment="Left" TextWrapping="Wrap" Text="节点操作" VerticalAlignment="Top" Height="14" Width="45" TextAlignment="Center" Margin="10,10,0,0" FontSize="10"/>
+        <Button x:Name="AddBtn" Content="添加" HorizontalAlignment="Left" VerticalAlignment="Top" Width="38" Height="30" Margin="55,0,0,0" Click="AddBtn_Click"/>
+        <Button x:Name="DeleteBtn" Content="删除" HorizontalAlignment="Left" VerticalAlignment="Top" Width="38" Height="30" Margin="98,0,0,0" Click="DeleteBtn_Click"/>
+        <TextBox x:Name="TreeNameText" Text="请先创建树" FontSize="24" Margin="55,4,245,0" Height="40" VerticalAlignment="Top" VerticalContentAlignment="Center" Grid.Row="1" PreviewKeyUp="TreeNameText_PreviewKeyUp"/>
+        <Button x:Name="UpdateBtn" Content="升级" HorizontalAlignment="Left" VerticalAlignment="Top" Width="38" Height="30" Margin="164,0,0,0" Click="UpdateBtn_Click"/>
+        <Button x:Name="DegradeBtn" Content="降级" HorizontalAlignment="Left" Width="38" Margin="207,0,0,21.333" Click="DegradeBtn_Click"/>
+        <Button x:Name="MoveUpBtn" Content="上移" HorizontalAlignment="Left" Width="38" Margin="273,0,0,21.333" Click="MoveUpBtn_Click"/>
+        <Button x:Name="MoveDownBtn" Content="下移" HorizontalAlignment="Left" Width="38" Margin="316,0,0,21.333" Click="MoveDownBtn_Click"/>
+        <Button x:Name="AddRootBtn" Content="添加根节点" HorizontalAlignment="Left" VerticalAlignment="Top" Width="68" Height="30" Margin="382,0,0,0" Click="AddRootBtn_Click"/>
+    </Grid>
+</UserControl>

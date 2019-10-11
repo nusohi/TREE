@@ -1,0 +1,14 @@
+﻿<Window x:Class="TREE.InitTreePanel"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TREE"
+        mc:Ignorable="d"
+        Title="请选择" Height="130" Width="310" ResizeMode="NoResize" Topmost="True">
+    <Grid>
+        <Button x:Name="CreateBtn" Content="创建新树" FontSize="22" Click="CreateBtn_Click" Margin="0,0,154.667,2"/>
+        <Button x:Name="OpenBtn" Content="打开" Margin="155,0,-0.333,2" FontSize="22" Click="OpenBtn_Click"/>
+
+    </Grid>
+</Window>

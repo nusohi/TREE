@@ -1,0 +1,32 @@
+﻿<Window x:Class="TREE.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TREE"
+        mc:Ignorable="d"
+        Title="TREE - 个人资料管理系统" Height="496" Width="800" MaxHeight="496" MinHeight="495.9" MinWidth="800" MaxWidth="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <local:TreeViewM x:Name="treeView" HorizontalAlignment="Left" Margin="10,40,0,-19.333" Width="457" Loaded="TreeView_Loaded" PreviewMouseDoubleClick="TreeView_PreviewMouseDoubleClick"/>
+        <Menu Height="30" HorizontalAlignment="Left" Name="menu1" VerticalAlignment="Top" Width="793">
+            <MenuItem Header="新建树" Click="CreateTree" Height="30" />
+            <MenuItem Header="打开树" Click="LoadTree" />
+            <MenuItem Header="保存树" Click="SaveTree" />
+            <MenuItem Header="删除树" Click="DeleteTree" />
+            <MenuItem Header="Help" Click="HelpTip" />
+        </Menu>
+        <RichTextBox x:Name="ContentText" Margin="472,82,8.333,13.667" VerticalScrollBarVisibility="Auto" PreviewKeyUp="ContentText_PreviewKeyUp" AcceptsTab="True" TabIndex="4">
+            <FlowDocument>
+                <Paragraph>
+                    <Run Text="RichTextBox"/>
+                </Paragraph>
+            </FlowDocument>
+        </RichTextBox>
+        <TextBlock x:Name="BoldText" HorizontalAlignment="Left" Margin="472,50,0,0" TextWrapping="Wrap" Text="加粗" VerticalAlignment="Top" PreviewMouseLeftButtonDown="BoldText_PreviewMouseLeftButtonDown" FontSize="16" FontWeight="Bold" />
+        <TextBlock x:Name="ItalicText" HorizontalAlignment="Left" Margin="529,50,0,0" TextWrapping="Wrap" Text="斜线" VerticalAlignment="Top" PreviewMouseLeftButtonDown="ItalicText_PreviewMouseLeftButtonDown" FontSize="16" FontStyle="Italic" />
+        <TextBlock x:Name="UnderlineText" HorizontalAlignment="Left" Margin="589,50,0,0" TextWrapping="Wrap" Text="下划线" VerticalAlignment="Top" PreviewMouseLeftButtonDown="UnderlineText_PreviewMouseLeftButtonDown" FontSize="16" TextDecorations="Underline" />
+    </Grid>
+</Window>
