@@ -41,12 +41,6 @@ namespace TREE.DB
 
         public TextNode QueryNode(int id) {
             string SQL = @"select Content,Path from TextNode_Table where ID=@ID;";
-            /*
-             * select ID,Content,Path 
-             * from TextNode_Table
-             * where ID=2;
-             * 
-             */
             TextNode node = null;
             SqlParameter[] para = {
                 new SqlParameter("@ID", SqlDbType.Int),
